@@ -33,9 +33,9 @@ class Weather:
         json = get_weather_by_city(city_name)
 
         self.name = json['name']
-        self.main = json['weather']['main']
-        self.desc = json['weather']['description']
-        self.icon = json['weather']['icon']
+        self.main = json['weather'][0]['main']
+        self.desc = json['weather'][0]['description']
+        self.icon = json['weather'][0]['icon']
         self.temp = json['main']['temp']
         self.humidity = json['main']['humidity']
 
